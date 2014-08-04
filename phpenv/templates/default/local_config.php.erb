@@ -2,5 +2,5 @@
 /*
  * Environment Variables for application <%= @application %>
  */
-return json_encode("<%= @config[@application.to_s][:config] %>");
+return json_encode("<%= @local_config[@application.to_s][:config] %>");
 
