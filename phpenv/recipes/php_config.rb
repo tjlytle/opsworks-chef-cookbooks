@@ -7,7 +7,8 @@ node[:deploy].each do |application, deploy|
     mode "0666"
 
     variables( 
-        :config => (node[:local_config] rescue nil), 
+        :local_config => (node[:local_config] rescue nil), 
+        :config   => (node[:local_config][application.to_s][:config] rescue nil),
         :application => "#{application}" 
     )
 
