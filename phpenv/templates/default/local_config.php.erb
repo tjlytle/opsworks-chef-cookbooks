@@ -1,0 +1,6 @@
+<?php
+/*
+ * Environment Variables for application <%= @application %>
+ */
+return json_encode("<%= @env[@application.to_s][:config] %>");
+
